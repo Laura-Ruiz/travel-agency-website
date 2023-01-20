@@ -13,6 +13,7 @@ import info3 from "../assets/info3.png";
 export default function Recommend() {
   const data = [
     {
+      id: 1,
       image: Destination1,
       title: "Singapore",
       subTitle: "Singapore, officialy thr Republic of Singapore, is a",
@@ -20,6 +21,7 @@ export default function Recommend() {
       duration: "Approx 2 night trip",
     },
     {
+      id: 2,
       image: Destination2,
       title: "Thailand",
       subTitle: "Thailand is a Southeast Asia country. It's known for",
@@ -27,6 +29,7 @@ export default function Recommend() {
       duration: "Approx 2 night trip",
     },
     {
+      id: 3,
       image: Destination3,
       title: "Paris",
       subTitle: "Paris, France's capital, is a major European city and a",
@@ -34,6 +37,7 @@ export default function Recommend() {
       duration: "Approx 2 night trip",
     },
     {
+      id: 4,
       image: Destination4,
       title: "New Zealand",
       subTitle: "New Zealand is an island country in the",
@@ -41,6 +45,7 @@ export default function Recommend() {
       duration: "Approx 1 night trip",
     },
     {
+      id: 5,
       image: Destination5,
       title: "Bora Bora",
       subTitle: "Bora Bora is a small South Pacific island northwest of",
@@ -48,6 +53,7 @@ export default function Recommend() {
       duration: "Approx 2 night 2 day trip",
     },
     {
+      id: 6,
       image: Destination6,
       title: "London",
       subTitle: "London, the capital of England and the United",
@@ -74,6 +80,7 @@ export default function Recommend() {
           {packages.map((pkg, index) => {
             return (
               <li
+                key={index}
                 className={active === index + 1 ? "active" : ""}
                 onClick={() => setActive(index + 1)}
               >
@@ -86,7 +93,7 @@ export default function Recommend() {
       <div className="destinations">
         {data.map((destination) => {
           return (
-            <div className="destination">
+            <div key={destination.id} className="destination">
               <img src={destination.image} alt="" />
               <h3>{destination.title}</h3>
               <p>{destination.subTitle}</p>

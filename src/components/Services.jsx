@@ -8,24 +8,28 @@ import service4 from "../assets/service4.png";
 export default function Services() {
   const data = [
     {
+      id: 1,
       icon: service1,
       title: "Get Best Prices",
       subTitle:
         "Pay through our application and save thousands and get amazing rewards.",
     },
     {
+      id: 2,
       icon: service2,
       title: "Covid Safe",
       subTitle:
         "We have all the curated hotels that have all the precaution for a covid safe environment.",
     },
     {
+      id: 3,
       icon: service3,
       title: "Flexible Payment",
       subTitle:
         " Enjoy the flexible payment through our app and get rewards on every payment.",
     },
     {
+      id: 4,
       icon: service4,
       title: "Find The Best Near You",
       subTitle:
@@ -34,9 +38,9 @@ export default function Services() {
   ];
   return (
     <Section id="services">
-      {data.map((service, index) => {
+      {data.map((service) => {
         return (
-          <div className="service">
+          <div key={service.id} className="service">
             <div className="icon">
               <img src={service.icon} alt="" />
             </div>

@@ -1,52 +1,56 @@
 import React from "react";
 import styled from "styled-components";
 import avatarImage from "../assets/avatarImage.jpg";
+
+const tetimonials = [
+  {
+  id:1,
+  img: avatarImage,
+  name: "Laura Ruiz",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditateasperiores eaque.",
+  job: "Frontend Developer",
+},
+{ id:2,
+  img: avatarImage,
+  name: "Laura Ruiz",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditateasperiores eaque.",
+  job: "Frontend Developer"
+},
+{id:3,
+  img: avatarImage,
+  name: "Laura Ruiz",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditateasperiores eaque.",
+  job: "Frontend Developer"
+},
+{id:4,
+  img: avatarImage,
+  name: "Laura Ruiz",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditateasperiores eaque.",
+  job: "Frontend Developer"
+}
+
+]
+
 export default function Testimonials() {
+
   return (
     <Section id="testimonials">
       <div className="title">
         <h2>Happy Customers</h2>
       </div>
       <div className="testimonials">
-        <div className="testimonial">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-            asperiores eaque.
-          </p>
-          <div className="info">
-            <img src={avatarImage} alt="" />
-            <div className="details">
-              <h4>Kishan Sheth</h4>
-              <span>CEO - Shashaan Web Solutions</span>
-            </div>
-          </div>
-        </div>
-        <div className="testimonial">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-            asperiores eaque.
-          </p>
-          <div className="info">
-            <img src={avatarImage} alt="" />
-            <div className="details">
-              <h4>Kishan Sheth</h4>
-              <span>CEO - Shashaan Web Solutions</span>
-            </div>
-          </div>
-        </div>
-        <div className="testimonial">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-            asperiores eaque.
-          </p>
-          <div className="info">
-            <img src={avatarImage} alt="" />
-            <div className="details">
-              <h4>Kishan Sheth</h4>
-              <span>CEO - Shashaan Web Solutions</span>
-            </div>
-          </div>
-        </div>
+          {tetimonials.map((p) => 
+            <div key={p.id} className="testimonial">
+              <p>{p.description}</p>
+              <div className="info">
+                <img src={p.img} alt="" />
+                <div className="details">
+                  <h4>{p.name}</h4>
+                  <span>{p.job}</span>
+                </div>
+              </div>
+              </div>
+          )}
       </div>
     </Section>
   );

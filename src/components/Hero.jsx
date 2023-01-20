@@ -142,7 +142,6 @@ const Section = styled.section`
         flex-direction: column;
         padding: 0.8rem;
         gap: 0.8rem;
-        /* padding: 0; */
         .container {
           padding: 0 0.8rem;
           input[type="date"] {
@@ -153,7 +152,6 @@ const Section = styled.section`
           padding: 1rem;
           font-size: 1rem;
         }
-        /* display: none; */
       }
     }
   }
